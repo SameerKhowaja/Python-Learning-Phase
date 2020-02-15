@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from csv import writer
 
-response = requests.get('https://www.kiryano.com/home')
+response = requests.get('https://www.kiryano.com/home.php?pid=65')
 soup = BeautifulSoup(response.text, 'html.parser')
 
 mainRoot = soup.find(class_="shop-page-container mb-50").find(class_="container").find(class_="row").find(class_="col-lg-9 order-1 order-lg-2 mb-sm-35 mb-xs-35")
